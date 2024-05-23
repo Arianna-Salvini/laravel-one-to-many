@@ -17,7 +17,14 @@
                 <h3>{{ $project->title }}</h3>
                 <h5>{{ $project->subtitle }}</h5>
                 <div class="metadata">
-                    <strong>Type: </strong> {{ $project->type ? $project->type->name : 'Not type assigned' }}
+                    <strong>Type: </strong>
+                    {{ $project->type ? $project->type->name : 'Not type assigned' }}
+                    {{-- @if ($project->type)
+                        {{ $project->type->name }}
+                    @else
+                        N/A
+                    @endif --}}
+                    {{-- {{ $project->type ? $project->type->name : 'n/A' }} --}}
                 </div>
             </div>
             <div class="d-flex align-items-center py-5">

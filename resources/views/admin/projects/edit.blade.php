@@ -83,7 +83,8 @@
                     <option selected disabled>Select a type</option>
                     @foreach ($types as $type)
                         <option value="{{ $type->id }}" {{ $type->id == old('type_id') ? 'selected' : '' }}>
-                            {{ $type->name }} </option>
+                            {{ $type->name }}
+                        </option>
                     @endforeach
 
                 </select>

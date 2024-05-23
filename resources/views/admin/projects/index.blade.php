@@ -58,8 +58,18 @@
                                 <td>{{ $project->title }}</td>
                                 <td>{{ $project->slug }}</td>
                                 <td>{{ $project->subtitle }}</td>
+
                                 <td>{{ $project->description }}</td>
-                                <td> {{ $project->type ? $project->type->name : 'Not type assigned' }}</td>
+
+                                <td>
+                                    @if ($project->type)
+                                        {{ $project->type->name }}
+                                    @else
+                                        N/A
+                                    @endif
+
+                                </td>
+
                                 <td>{{ $project->url }}</td>
                                 <td
                                     class="text-center d-flex flex-column justify-content-center align-items-center gap-2 p-3">

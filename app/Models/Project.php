@@ -19,6 +19,6 @@ class Project extends Model
    */
   public function type(): BelongsTo
   {
-      return $this->belongsTo(Type::class, 'foreign_key', 'other_key');
+      return $this->belongsTo(Type::class);
   }
 }

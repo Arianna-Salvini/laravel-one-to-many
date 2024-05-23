@@ -46,9 +46,11 @@ class ProjectController extends Controller
         $image_path=Storage::put('uploads', $validated['image']);
         $validated['image']=$image_path;
     };
-    // dd($validated, $image_path);
-        
+        // dd($validated, $image_path);
+        // dd($validated);
         Project::create($validated);
+
+
 
         return to_route('admin.projects.index')->with('message', 'Project added successfully');
     }
