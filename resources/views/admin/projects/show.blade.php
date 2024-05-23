@@ -16,6 +16,9 @@
             <div>
                 <h3>{{ $project->title }}</h3>
                 <h5>{{ $project->subtitle }}</h5>
+                <div class="metadata">
+                    <strong>Type: </strong> {{ $project->type ? $project->type->name : 'Not type assigned' }}
+                </div>
             </div>
             <div class="d-flex align-items-center py-5">
                 <div>
