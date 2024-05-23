@@ -34,7 +34,7 @@
                             <th scope="col">SLUG</th>
                             <th scope="col">SUBTITLE</th>
                             <th scope="col">DESCRIPTION</th>
-                            <th scope="col">TECHNOLOGY</th>
+                            <th scope="col">TYPE</th>
                             <th scope="col">URL</th>
                             <th scope="col" class="text-center">ACTION</th>
                         </tr>
@@ -59,7 +59,7 @@
                                 <td>{{ $project->slug }}</td>
                                 <td>{{ $project->subtitle }}</td>
                                 <td>{{ $project->description }}</td>
-                                <td>{{ $project->technology }}</td>
+                                <td> {{ $project->type ? $project->type->name : 'Not type assigned' }}</td>
                                 <td>{{ $project->url }}</td>
                                 <td
                                     class="text-center d-flex flex-column justify-content-center align-items-center gap-2 p-3">
